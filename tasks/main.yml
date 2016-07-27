@@ -1,0 +1,10 @@
+---
+- name: install haveged
+  become: yes
+  become_user: root
+  package: name=haveged state=present
+
+- name: start haveged
+  become: yes
+  become_user: root
+  service: name=haveged state=started
