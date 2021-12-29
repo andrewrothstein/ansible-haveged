@@ -9,9 +9,9 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: install os pkg
-  become: yes
+- name: install os pkgs
+  become: true
   become_user: root
   package:
-    name: haveged
+    name: '{{ haveged_os_pkgs | default(["haveged"]) }}'
     state: present
