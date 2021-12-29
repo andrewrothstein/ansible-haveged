@@ -33,5 +33,4 @@ galaxy_info:
   role_name: haveged
 
 dependencies:
-  - role: andrewrothstein.epel
-    version: v1.1.3
+  - andrewrothstein.epel
